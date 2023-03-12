@@ -3,6 +3,7 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Home } from './components/Home';
 import { About } from './components/About';
+import NoteState from './context/notes/NoteState';
 
 
 import {
@@ -14,21 +15,22 @@ import {
 function App() {
   return (
     <>
-<Router>
+      <NoteState>
+        <Router>
 
-    <Navbar></Navbar>
-    
-<Routes>
+          <Navbar></Navbar>
 
-<Route exact path="/" element={<Home />}/>
-  
-<Route exact path="/about" element={<About />}/>
-  
-</Routes>
+          <Routes>
 
-</Router>
+            <Route exact path="/" element={<Home />} />
 
-</>
+            <Route exact path="/about" element={<About />} />
+
+          </Routes>
+
+        </Router>
+      </NoteState>
+    </>
   );
 }
 
