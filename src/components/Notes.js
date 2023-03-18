@@ -7,7 +7,7 @@ import {useNavigate} from 'react-router-dom'
 const Notes = (props) => {
     const context = useContext(noteContext);
     const { notes, getNotes, editNote } = context;
-    console.log(notes)
+    // console.log(notes)
     let navigate = useNavigate();
     
     useEffect(() => {

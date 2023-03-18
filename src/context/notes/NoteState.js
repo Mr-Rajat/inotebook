@@ -73,7 +73,7 @@ const NoteState = (props) => {
     const json = await response.json();
     // console.log(json);
 
-    console.log("Deleting the node with id" + id);
+    // console.log("Deleting the node with id" + id);
     const newNotes =  notes.filter((note) => { return note._id !== id })
     setNotes(newNotes);
   }
